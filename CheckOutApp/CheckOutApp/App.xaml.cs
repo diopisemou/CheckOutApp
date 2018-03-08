@@ -13,7 +13,7 @@ namespace CheckOutApp
 		{
 			InitializeComponent();
 
-			MainPage = new CheckOutApp.MainPage();
+			MainPage = new Views.MainPage();
 		}
 
 		protected override void OnStart ()

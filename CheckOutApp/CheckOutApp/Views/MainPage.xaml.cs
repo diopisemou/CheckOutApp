@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CheckOutApp.Models;
 using Xamarin.Forms;
 
-namespace CheckOutApp
+namespace CheckOutApp.Views
 {
 	public partial class MainPage : ContentPage
 	{
