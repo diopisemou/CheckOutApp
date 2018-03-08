@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CheckOutApp"
+             x:Class="CheckOutApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style x:Key="CarouselLabelStyle" TargetType="Label">
+
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="#F9FAFC" />
+                <Setter Property="HeightRequest" Value="25" />
+            </Style>
+
+            <Style x:Key="FooterButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="WidthRequest" Value="45" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <StackLayout x:Name="CheckOutHeader" Orientation="Horizontal" BackgroundColor="#F9FAFC" HeightRequest="80"
+                         HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="500">
+
+                <StackLayout BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="5" Margin="80,22,0,22">
+                    <Frame x:Name="Step1Frame" CornerRadius="200" WidthRequest="35" HeightRequest="35"
+                           Padding="0,0,0,0" OutlineColor="Red" BackgroundColor="Red" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="FrameStep1TapGestureRecognizer_OnTapped" />
+                        </Frame.GestureRecognizers>
+                        <StackLayout BackgroundColor="#443E43" WidthRequest="35" HeightRequest="35">
+                            <Label BackgroundColor="#443E43" WidthRequest="35" HeightRequest="35" TextColor="#443E43"
+                                   Text="Step1" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <BoxView WidthRequest="70" HeightRequest="1" Color="#443E43" Margin="-5,40,-5,0" />
+                </StackLayout>
+                <Frame x:Name="Step2Frame" CornerRadius="200" WidthRequest="35" HeightRequest="5" Padding="0,0,0,0"
+                       HasShadow="True" Margin="0,22,0,22" BackgroundColor="#443E43">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FrameStep2TapGestureRecognizer_OnTapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <StackLayout Orientation="Vertical">
+                    <BoxView WidthRequest="70" HeightRequest="1" Color="#443E43" Margin="-5,40,-5,0" />
+                </StackLayout>
+                <Frame x:Name="Step3Frame" CornerRadius="200" WidthRequest="35" HeightRequest="5" Padding="0,0,0,0"
+                       HasShadow="True" Margin="0,22,0,22" BackgroundColor="#443E43">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FrameStep3TapGestureRecognizer_OnTapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout x:Name="CheckOutContent" BackgroundColor="#F9FAFC" HeightRequest="450">
+                <ContentView x:Name="CheckOutContentHolder" />
+            </StackLayout>
+
+            <StackLayout x:Name="CheckOutButtons" BackgroundColor="#F9FAFC" HeightRequest="60" Orientation="Horizontal"
+                         HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="BackButton" BackgroundColor="#DBB34A" Text="BACK" TextColor="#F9FAFC"
+                        WidthRequest="180" HeightRequest="30" Pressed="BackButton_OnPressed" />
+                <Button x:Name="NextButton" BackgroundColor="#443E43" Text="NEXT" TextColor="#F9FAFC"
+                        WidthRequest="180" HeightRequest="30" Pressed="NextButton_OnPressed" />
+            </StackLayout>
+
+            <StackLayout x:Name="CheckOutFooter" Orientation="Horizontal" BackgroundColor="#443E43" HeightRequest="40"
+                         Padding="40,0" Margin="0,10,0,0">
+
+                <Image Source="home.png" Style="{StaticResource FooterButtonStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTappedHome"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="search.png" Style="{StaticResource FooterButtonStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTappedSearch"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="menu.png" Style="{StaticResource FooterButtonStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTappedMenu"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="cart.png" Style="{StaticResource FooterButtonStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTappedCart"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="account.png" Style="{StaticResource FooterButtonStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="TapGestureRecognizer_OnTappedAccount"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
