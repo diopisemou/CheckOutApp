@@ -4,9 +4,51 @@
              x:Class="CheckOutApp.Views.SecondPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms 2!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
+
+            <ScrollView>
+
+                <StackLayout>
+
+                    <Label Text="Please enter shipping Adress" TextColor="#443e42" Margin="20,25,10,0"></Label>
+                    <StackLayout Padding="20,10,10,0">
+                        <Label Text="Receiver Name" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="Receiver" FontSize="18" TextColor="#443e42" ></Entry>
+                        <StackLayout Padding="10,10,10,0">
+                            <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                        </StackLayout>
+                        <Label Text="Shipping Adress" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="Adress" FontSize="18" TextColor="#443e42" ></Entry>
+                        <StackLayout Padding="10,10,10,0">
+                            <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                        </StackLayout>
+                        <Label Text="City" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="City" FontSize="18" TextColor="#443e42" ></Entry>
+                        <StackLayout Padding="10,10,10,0">
+                            <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                        </StackLayout>
+                        <Label Text="House Number" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="HNumber" FontSize="18" TextColor="#443e42" ></Entry>
+                        <StackLayout Padding="10,10,10,0">
+                            <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                        </StackLayout>
+                        <Label Text="Street Name" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="Street" FontSize="18" TextColor="#443e42" ></Entry>
+                        <StackLayout Padding="10,10,10,0">
+                            <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                        </StackLayout>
+                        <Label Text="Code" TextColor="#8f939c" ></Label>
+                        <Entry x:Name="Code" FontSize="18" TextColor="#443e42" ></Entry>
+                    </StackLayout>
+
+                    <StackLayout Padding="10,10,10,0">
+                        <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="Gainsboro" HeightRequest="0.5"></BoxView>
+                    </StackLayout>
+                    
+                </StackLayout>
+
+            </ScrollView>
+
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
