@@ -32,7 +32,7 @@ namespace CheckOutApp.Views
 	    public ThirdPage(ContentPage a)
 	    {
 	        InitializeComponent();
-	        var lst = new ListView();
+	        var lst = new ListView(); 
 	        previouscontent = a;
 	        ReviewIsValid = false;
 	        List<ShopItem> CartList = new List<ShopItem>
@@ -48,31 +48,26 @@ namespace CheckOutApp.Views
 
 	    private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
 	    {
-	        DisplayAlert("Trying", "In Function", "OK");
-
+	        
 	        List<ShopItem> CartList = CartListView.ItemsSource as List<ShopItem>;
-	        Image senderImage = sender as Image;
 
+	        StackLayout senderView = sender as StackLayout;
+	        IEnumerable<Label> results = senderView.Children.SkipWhile(delegate(View view) { return view.GetType() != typeof(Label); }).Cast<Label>();
 
-	        foreach (ShopItem VARIABLE in CartList)
+	        foreach (var VARIABLE in results)
 	        {
-	            DisplayAlert("Trying", "In Foreach", "OK");
-	            StackLayout res = null;
-	            res = this.FindByName<StackLayout>(VARIABLE.ProductUid);
-	            if (res == null)
-	            {
-	                DisplayAlert("Erreur", "Not Found", "OK");
-	            }
-	            else
-	            {
-	                DisplayAlert("Success", "Found", "OK");
-	                //CartList.Remove(VARIABLE);
-	                res.FadeTo(0, 2000);
-	                //res.IsVisible = false;
-	            }
+	            CartList = CartList.SkipWhile(delegate(ShopItem item) { return item.ProductUid.Contains(VARIABLE.Text); }).ToList();
 	        }
 
-	        //CartListView.ItemsSource = CartList;
+            
+
+	        CartListView.ItemsSource = CartList;
+
+	       
+
+            //senderView.Parent.SetValue(IsVisibleProperty,false);
+            
+            
         }
     }
 }

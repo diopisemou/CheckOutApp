@@ -22,10 +22,10 @@ namespace CheckOutApp.Views
             PayementIsSelected = false;
             DeliveryIsSelected = false;
             var lst = new ListView();
-            CreditCardFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            BankTransfertFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            ExpressShippingFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            NormalShippingFrame.OutlineColor = Color.FromHex("#F9FAFC");
+            CreditCardFrame.OutlineColor = Color.FromHex("#443E43");
+            BankTransfertFrame.OutlineColor = Color.FromHex("#443E43");
+            ExpressShippingFrame.OutlineColor = Color.FromHex("#443E43");
+            NormalShippingFrame.OutlineColor = Color.FromHex("#443E43");
         }
 
         public FirstPage(ContentPage a)
@@ -35,10 +35,10 @@ namespace CheckOutApp.Views
             PayementIsSelected = false;
             DeliveryIsSelected = false;
             previouscontent = a;
-            CreditCardFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            BankTransfertFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            ExpressShippingFrame.OutlineColor = Color.FromHex("#F9FAFC");
-            NormalShippingFrame.OutlineColor = Color.FromHex("#F9FAFC");
+            CreditCardFrame.OutlineColor = Color.FromHex("#443E43");
+            BankTransfertFrame.OutlineColor = Color.FromHex("#443E43");
+            ExpressShippingFrame.OutlineColor = Color.FromHex("#443E43");
+            NormalShippingFrame.OutlineColor = Color.FromHex("#443E43");
         }
 
         private void PayementBankTapGestureRecognizer_OnTapped(object sender, EventArgs e)

@@ -38,15 +38,15 @@
             <StackLayout x:Name="CheckOutHeader" Orientation="Horizontal" BackgroundColor="#F9FAFC" HeightRequest="80"
                          HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="500">
 
-                <StackLayout BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="5" Margin="80,22,0,22">
-                    <Frame x:Name="Step1Frame" CornerRadius="200" WidthRequest="35" HeightRequest="35"
+                <StackLayout  WidthRequest="35" HeightRequest="5" Margin="80,22,0,22" Orientation="Horizontal" HorizontalOptions="Start">
+                    <Frame x:Name="Step1Frame" CornerRadius="22" WidthRequest="35" HeightRequest="35"
                            Padding="0,0,0,0" OutlineColor="#443E43" BackgroundColor="#F9FAFC" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Center">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="FrameStep1TapGestureRecognizer_OnTapped" />
+                            <TapGestureRecognizer Tapped="FrameStep1TapGestureRecognizer_OnTapped" NumberOfTapsRequired="1" />
                         </Frame.GestureRecognizers>
-                        <StackLayout x:Name="Step1FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
+                        <Frame CornerRadius="22" x:Name="Step1FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
 
-                        </StackLayout>
+                        </Frame>
                     </Frame>
                 </StackLayout>
 
@@ -54,15 +54,15 @@
                     <BoxView WidthRequest="70" HeightRequest="1" Color="#443E43" Margin="-5,40,-5,0" />
                 </StackLayout>
 
-                <StackLayout BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="5" Margin="0,22,0,22">
-                    <Frame x:Name="Step2Frame" CornerRadius="200" WidthRequest="35" HeightRequest="35"
+                <StackLayout HorizontalOptions="Start" WidthRequest="35" HeightRequest="5" Margin="0,22,0,22">
+                    <Frame x:Name="Step2Frame" CornerRadius="22" WidthRequest="35" HeightRequest="35"
                            Padding="0,0,0,0" OutlineColor="#443E43" BackgroundColor="#F9FAFC" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Center">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="FrameStep2TapGestureRecognizer_OnTapped" />
+                            <TapGestureRecognizer Tapped="FrameStep2TapGestureRecognizer_OnTapped" NumberOfTapsRequired="1" />
                         </Frame.GestureRecognizers>
-                        <StackLayout x:Name="Step2FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
+                        <Frame CornerRadius="22" x:Name="Step2FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
                             
-                        </StackLayout>
+                        </Frame>
                     </Frame>
                 </StackLayout>
 
@@ -70,15 +70,15 @@
                     <BoxView WidthRequest="70" HeightRequest="1" Color="#443E43" Margin="-5,40,-5,0" />
                 </StackLayout>
 
-                <StackLayout BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="5" Margin="0,22,0,22">
-                    <Frame x:Name="Step3Frame" CornerRadius="200" WidthRequest="35" HeightRequest="35"
+                <StackLayout BackgroundColor="#F9FAFC" HorizontalOptions="Start" WidthRequest="35" HeightRequest="5" Margin="0,22,0,22">
+                    <Frame x:Name="Step3Frame" CornerRadius="22" WidthRequest="35" HeightRequest="35"
                            Padding="0,0,0,0" OutlineColor="#443E43" BackgroundColor="#F9FAFC" HasShadow="False" HorizontalOptions="Center" VerticalOptions="Center">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="FrameStep3TapGestureRecognizer_OnTapped" />
+                            <TapGestureRecognizer Tapped="FrameStep3TapGestureRecognizer_OnTapped" NumberOfTapsRequired="1" />
                         </Frame.GestureRecognizers>
-                        <StackLayout x:Name="Step3FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
+                        <Frame CornerRadius="22" x:Name="Step3FrameStack" BackgroundColor="#F9FAFC" WidthRequest="35" HeightRequest="35">
                             
-                        </StackLayout>
+                        </Frame>
                     </Frame>
                 </StackLayout>
 
@@ -97,7 +97,7 @@
             </StackLayout>
 
             <StackLayout x:Name="CheckOutFooter" Orientation="Horizontal" BackgroundColor="#443E43" HeightRequest="40"
-                         Padding="40,0" Margin="0,10,0,0">
+                         Padding="40,0" Margin="0,10,0,0" VerticalOptions="EndAndExpand">
 
                 <Image Source="home.png" Style="{StaticResource FooterButtonStyle}">
                     <Image.GestureRecognizers>

@@ -12,17 +12,21 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Padding="80,0">
                     <Frame x:Name="CreditCardFrame" Margin="0,0,60,0" CornerRadius="10" OutlineColor="#443E43"
-                           HasShadow="False">
+                           HasShadow="False" >
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="PayementCreditTapGestureRecognizer_OnTapped" />
                         </Frame.GestureRecognizers>
-                        <Image Source="credit_card.png" WidthRequest="50" HeightRequest="50" />
+                        <StackLayout>
+                            <Image Source="credit_card.png" WidthRequest="50" HeightRequest="50" />
+                        </StackLayout>
                     </Frame>
                     <Frame x:Name="BankTransfertFrame" CornerRadius="10" OutlineColor="#443E43" HasShadow="False">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="PayementBankTapGestureRecognizer_OnTapped" />
                         </Frame.GestureRecognizers>
-                        <Image Source="bank_transfer.png" WidthRequest="50" HeightRequest="50" />
+                        <StackLayout>
+                            <Image Source="bank_transfer.png" WidthRequest="50" HeightRequest="50" />
+                        </StackLayout>
                     </Frame>
                 </StackLayout>
             </StackLayout>
@@ -37,13 +41,18 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="DeliveryNormalTapGestureRecognizer_OnTapped" />
                         </Frame.GestureRecognizers>
-                        <Image Source="normal_shipping.png" WidthRequest="50" HeightRequest="50" />
+                        <StackLayout>
+                            <Image Source="normal_shipping.png" WidthRequest="50" HeightRequest="50" />
+                        </StackLayout>
                     </Frame>
                     <Frame x:Name="ExpressShippingFrame" CornerRadius="10" OutlineColor="#443E43" HasShadow="False">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="DeliveryExpressTapGestureRecognizer_OnTapped" />
                         </Frame.GestureRecognizers>
-                        <Image Source="express_shipping.png" WidthRequest="50" HeightRequest="50" />
+                        <StackLayout>
+                            <Image Source="express_shipping.png" WidthRequest="50" HeightRequest="50" />
+                        </StackLayout>
+                        
                     </Frame>
                 </StackLayout>
             </StackLayout>
