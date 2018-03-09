@@ -109,8 +109,8 @@ namespace CheckOutApp.Views
                             NextButton.Text = "NEXT";
                             pstep++;
                             PayementStep = pstep;
-                            //Step1Frame.HasShadow = true;
-                            Step1Frame.BackgroundColor = Color.FromHex("#443E43");
+                            Step1Frame.HasShadow = true;
+                            Step1FrameStack.BackgroundColor = Color.FromHex("#443E43");
                             CheckOutContentHolder.Content = aa.Content;
                             //DisplayAlert("Etape 1", "Etape 1 Effectue step = "+this.PayementStep, "Ok");
                             if (PayementStep > 3 || PayementStep < 0)
@@ -165,7 +165,7 @@ namespace CheckOutApp.Views
         {
             //DisplayAlert("BackButton", "BackButton Pressed", "Ok");
             var pstep = PayementStep - 2;
-            switchsteps(pstep);
+            switchsteps(pstep,-1);
         }
 
         private void NextButton_OnPressed(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace CheckOutApp.Views
                         pstep++;
                         PayementStep = pstep;
                         Step1Frame.HasShadow = true;
-                        Step1Frame.BackgroundColor = Color.FromHex("#443E43");
+                        Step1FrameStack.BackgroundColor = Color.FromHex("#443E43");
                         CheckOutContentHolder.Content = aa.Content;
                         //DisplayAlert("Etape 1", "Etape 1 Effectue step = "+this.PayementStep, "Ok");
                         if (PayementStep > 3 || PayementStep < 0)

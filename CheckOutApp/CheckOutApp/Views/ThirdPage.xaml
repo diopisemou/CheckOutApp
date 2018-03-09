@@ -4,7 +4,62 @@
              x:Class="CheckOutApp.Views.ThirdPage">
     <ContentPage.Content>
         <StackLayout>
+            <ListView x:Name="CartListView" SeparatorVisibility="Default" SeparatorColor="Gray"
+                      HasUnevenRows="True" HeightRequest="700" Margin="0" IsRefreshing="False" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+  
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="0"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100"></RowDefinition>
+                                    </Grid.RowDefinitions>
 
+
+
+                                <StackLayout Grid.Column="0" BackgroundColor="#443E43" Padding="10,10,10,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" WidthRequest="60" HeightRequest="100">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                                    </StackLayout.GestureRecognizers>
+
+                                    <Image WidthRequest="10" HeightRequest="10"  Source="{Binding CloseImageSource}" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,20">
+                                      
+                                    </Image>
+                                    
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="2">
+                                    <Frame HasShadow="False">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame HasShadow="False">
+                                                <Image Source="{Binding ImageSource1}"></Image>
+                                            </Frame>
+                                            <Frame HasShadow="False">
+                                                <StackLayout Orientation="Vertical">
+                                                    <Label Text="{Binding Name}"></Label>
+                                                    <Label Text="{Binding Price}" Margin="150,0,0,0"></Label>
+                                                    <Label Text="{Binding Status}" Margin="0,-20,0,0"></Label>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+
+                                </Grid>
+
+                           
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

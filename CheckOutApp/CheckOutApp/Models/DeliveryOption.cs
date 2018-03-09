@@ -8,6 +8,7 @@ namespace CheckOutApp.Models
     {
         public DeliveryOption()
         {
+
         }
 
 
